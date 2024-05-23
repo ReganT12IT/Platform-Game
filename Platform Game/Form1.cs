@@ -17,7 +17,8 @@ namespace Platform_Game
             InitializeComponent();
         }
         bool left, right, jump;
-
+        int g = 17;
+        int force;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             //Move left and right
@@ -40,7 +41,7 @@ namespace Platform_Game
             if (e.KeyCode == Keys.Left) { left = false; }
         }
 
-        int force = 17;
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (right == true) { player.Left += 5; }//5 pixels to the right
@@ -55,6 +56,7 @@ namespace Platform_Game
             if (player.Top + player.Height >= screen.Height)
             {
                 player.Top = screen.Height - player.Height; //Stop Falling
+                jump = false;
             }
 
         }
