@@ -12,13 +12,20 @@ namespace Platform_Game
 {
     public partial class Form1 : Form
     {
+        List<PictureBox> collide;
         public Form1()
         {
             InitializeComponent();
+            collide = new List<PictureBox>()
+            {
+                box1, box2, box3
+            };
         }
         bool left, right, jump;
         int g = 17;
         int force;
+        
+        
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             //Move left and right
@@ -32,6 +39,11 @@ namespace Platform_Game
                     force = g;
                 }
             }
+        }
+
+        private void block1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -58,7 +70,28 @@ namespace Platform_Game
                 player.Top = screen.Height - player.Height; //Stop Falling
                 jump = false;
             }
-
+            else
+            {
+                player.Top += 5; 
+            }
+            //Collision
+            foreach (PictureBox p in collide)
+            {
+                if (player.Left + player.Width - 1 > p.Left && player.Left + player.Width + 5 < p.Left + p.Width + player.Width && player.Top + player.Width >= p.Top && player.Top < p.Top)
+                {
+                    player.Top = screen.Height - (p.Height + screen.Height - (p.Top + p.Height)) - player.Height;
+                    force = 0;
+                    jump = false;
+                }
+                if (player.Right > p.Left && player.Left < p.Right - player.Width / 2 && player.Bottom > p.Top)
+                {
+                    right = false;
+                }
+                if (player.Left < p.Right && player.Right > p.Left + player.Width / 2 && player.Bottom > p.Top)
+                {
+                    left = false;
+                }
+            }
         }
     }
 }
