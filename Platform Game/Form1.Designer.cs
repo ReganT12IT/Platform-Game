@@ -32,14 +32,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
-            this.box1 = new System.Windows.Forms.PictureBox();
-            this.box2 = new System.Windows.Forms.PictureBox();
             this.box3 = new System.Windows.Forms.PictureBox();
+            this.box2 = new System.Windows.Forms.PictureBox();
+            this.box1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.box1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -51,9 +51,9 @@
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Black;
-            this.player.Location = new System.Drawing.Point(519, 290);
+            this.player.Location = new System.Drawing.Point(92, 397);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(30, 31);
+            this.player.Size = new System.Drawing.Size(27, 27);
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             // 
@@ -68,33 +68,33 @@
             this.screen.Size = new System.Drawing.Size(1019, 551);
             this.screen.TabIndex = 1;
             // 
-            // box1
-            // 
-            this.box1.BackColor = System.Drawing.Color.CadetBlue;
-            this.box1.Location = new System.Drawing.Point(503, 481);
-            this.box1.Name = "box1";
-            this.box1.Size = new System.Drawing.Size(83, 67);
-            this.box1.TabIndex = 1;
-            this.box1.TabStop = false;
-            this.box1.Click += new System.EventHandler(this.block1_Click);
-            // 
-            // box2
-            // 
-            this.box2.BackColor = System.Drawing.Color.Chartreuse;
-            this.box2.Location = new System.Drawing.Point(436, 512);
-            this.box2.Name = "box2";
-            this.box2.Size = new System.Drawing.Size(205, 39);
-            this.box2.TabIndex = 2;
-            this.box2.TabStop = false;
-            // 
             // box3
             // 
-            this.box3.BackColor = System.Drawing.Color.Chocolate;
-            this.box3.Location = new System.Drawing.Point(368, 431);
+            this.box3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.box3.Location = new System.Drawing.Point(59, 430);
             this.box3.Name = "box3";
             this.box3.Size = new System.Drawing.Size(100, 50);
             this.box3.TabIndex = 3;
             this.box3.TabStop = false;
+            // 
+            // box2
+            // 
+            this.box2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.box2.Location = new System.Drawing.Point(11, 326);
+            this.box2.Name = "box2";
+            this.box2.Size = new System.Drawing.Size(79, 60);
+            this.box2.TabIndex = 2;
+            this.box2.TabStop = false;
+            // 
+            // box1
+            // 
+            this.box1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.box1.Location = new System.Drawing.Point(146, 369);
+            this.box1.Name = "box1";
+            this.box1.Size = new System.Drawing.Size(34, 40);
+            this.box1.TabIndex = 1;
+            this.box1.TabStop = false;
+            this.box1.Click += new System.EventHandler(this.block1_Click);
             // 
             // Form1
             // 
@@ -108,9 +108,9 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.screen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.box1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.box2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box1)).EndInit();
             this.ResumeLayout(false);
 
         }

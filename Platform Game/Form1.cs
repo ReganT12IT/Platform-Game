@@ -12,6 +12,7 @@ namespace Platform_Game
 {
     public partial class Form1 : Form
     {
+        //Declare variables
         List<PictureBox> collide;
         public Form1()
         {
@@ -56,6 +57,26 @@ namespace Platform_Game
         
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //Collision
+            foreach (PictureBox p in collide)
+            {
+                //right collision
+                if (player.Right > p.Left && player.Left < p.Right - player.Width / 2 && player.Bottom > p.Top && player.Top < p.Bottom)
+                {
+                    right = false;
+                }
+                //left collision
+                if (player.Left < p.Right && player.Right > p.Left + player.Width / 2 && player.Bottom > p.Top && player.Top < p.Bottom)
+                {
+                    left = false;
+                }
+                //bottom colision
+                if (player.Left + player.Width - 1 > p.Left && player.Left + player.Width + 5 < p.Left + p.Width + player.Width && player.Bottom + player.Width >= p.Bottom && player.Top < p.Bottom)
+                {
+                    jump = false;
+                }
+            }
+            //movement
             if (right == true) { player.Left += 5; }//5 pixels to the right
             if (left == true) { player.Left -= 5; }//5 pixels to the left
             //Falling
@@ -72,24 +93,16 @@ namespace Platform_Game
             }
             else
             {
-                player.Top += 5; 
+                player.Top += 5;
             }
-            //Collision
+            //top collision
             foreach (PictureBox p in collide)
             {
-                if (player.Left + player.Width - 1 > p.Left && player.Left + player.Width + 5 < p.Left + p.Width + player.Width && player.Top + player.Width >= p.Top && player.Top < p.Top)
+                if (player.Left + player.Width - 1 > p.Left && player.Left + player.Width + 5 < p.Left + p.Width + player.Width && player.Top + player.Height >= p.Top && player.Top< p.Top)
                 {
                     player.Top = screen.Height - (p.Height + screen.Height - (p.Top + p.Height)) - player.Height;
                     force = 0;
                     jump = false;
-                }
-                if (player.Right > p.Left && player.Left < p.Right - player.Width / 2 && player.Bottom > p.Top)
-                {
-                    right = false;
-                }
-                if (player.Left < p.Right && player.Right > p.Left + player.Width / 2 && player.Bottom > p.Top)
-                {
-                    left = false;
                 }
             }
         }
