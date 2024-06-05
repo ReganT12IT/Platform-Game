@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Platform_Game
 {
@@ -19,7 +20,7 @@ namespace Platform_Game
             InitializeComponent();
             collide = new List<PictureBox>()
             {
-                box1, box2, box3
+                box1, box2, box3, box5, box6, box7
             };
         }
         bool left, right, jump;
@@ -104,6 +105,11 @@ namespace Platform_Game
                     force = 0;
                     jump = false;
                 }
+            }
+            //Death
+            if (player.Bounds.IntersectsWith(box4.Bounds))
+            {
+                player.Location = new Point(94, 397);
             }
         }
     }
