@@ -18,15 +18,17 @@ namespace Platform_Game
         public Form1()
         {
             InitializeComponent();
+            //Add to list of items with collisions
             collide = new List<PictureBox>()
             {
-                box1, box2, box3, box5, box6, box7
+                box1, box2, box3, box5, box6, box7, box8, box9, box10, box11, box12, finish
             };
         }
+        //Declare variables
         bool left, right, jump;
         int g = 17;
         int force;
-        
+        //Declare forms (levels)
         
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -111,6 +113,12 @@ namespace Platform_Game
             {
                 player.Location = new Point(94, 397);
             }
+            //End level 
+            if (player.Bounds.IntersectsWith(finish.Bounds))
+            {
+                //Open next level info
+            }
         }
+        
     }
 }
