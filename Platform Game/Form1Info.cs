@@ -25,5 +25,5 @@ namespace Platform_Game
             this.Close();
         }
     }
-    }
+    
 }

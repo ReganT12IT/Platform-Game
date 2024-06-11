@@ -32,8 +32,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
-            this.box10 = new System.Windows.Forms.PictureBox();
             this.box12 = new System.Windows.Forms.PictureBox();
+            this.finish = new System.Windows.Forms.PictureBox();
+            this.box10 = new System.Windows.Forms.PictureBox();
             this.box11 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -54,11 +55,11 @@
             this.box3 = new System.Windows.Forms.PictureBox();
             this.box2 = new System.Windows.Forms.PictureBox();
             this.box1 = new System.Windows.Forms.PictureBox();
-            this.finish = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.box10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -99,8 +99,8 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.screen.Controls.Add(this.box12);
             this.screen.Controls.Add(this.finish);
+            this.screen.Controls.Add(this.box12);
             this.screen.Controls.Add(this.box10);
             this.screen.Controls.Add(this.box11);
             this.screen.Controls.Add(this.pictureBox11);
@@ -128,15 +128,6 @@
             this.screen.Size = new System.Drawing.Size(1019, 551);
             this.screen.TabIndex = 1;
             // 
-            // box10
-            // 
-            this.box10.BackColor = System.Drawing.SystemColors.Desktop;
-            this.box10.Location = new System.Drawing.Point(629, 291);
-            this.box10.Name = "box10";
-            this.box10.Size = new System.Drawing.Size(32, 108);
-            this.box10.TabIndex = 18;
-            this.box10.TabStop = false;
-            // 
             // box12
             // 
             this.box12.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -145,6 +136,24 @@
             this.box12.Size = new System.Drawing.Size(153, 60);
             this.box12.TabIndex = 22;
             this.box12.TabStop = false;
+            // 
+            // finish
+            // 
+            this.finish.BackColor = System.Drawing.Color.Purple;
+            this.finish.Location = new System.Drawing.Point(905, 361);
+            this.finish.Name = "finish";
+            this.finish.Size = new System.Drawing.Size(78, 10);
+            this.finish.TabIndex = 23;
+            this.finish.TabStop = false;
+            // 
+            // box10
+            // 
+            this.box10.BackColor = System.Drawing.SystemColors.Desktop;
+            this.box10.Location = new System.Drawing.Point(629, 291);
+            this.box10.Name = "box10";
+            this.box10.Size = new System.Drawing.Size(32, 108);
+            this.box10.TabIndex = 18;
+            this.box10.TabStop = false;
             // 
             // box11
             // 
@@ -330,15 +339,6 @@
             this.box1.TabStop = false;
             this.box1.Click += new System.EventHandler(this.block1_Click);
             // 
-            // finish
-            // 
-            this.finish.BackColor = System.Drawing.Color.Purple;
-            this.finish.Location = new System.Drawing.Point(905, 361);
-            this.finish.Name = "finish";
-            this.finish.Size = new System.Drawing.Size(78, 25);
-            this.finish.TabIndex = 23;
-            this.finish.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,8 +352,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.box10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -373,7 +374,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.box3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
             this.ResumeLayout(false);
 
         }

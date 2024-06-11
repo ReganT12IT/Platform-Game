@@ -21,14 +21,13 @@ namespace Platform_Game
             //Add to list of items with collisions
             collide = new List<PictureBox>()
             {
-                box1, box2, box3, box5, box6, box7, box8, box9, box10, box11, box12, finish
+                box1, box2, box3, box5, box6, box7, box8, box9, box10, box11, box12, 
             };
         }
         //Declare variables
-        bool left, right, jump;
+        bool left, right, jump, touched;
         int g = 17;
         int force;
-        //Declare forms (levels)
         
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -116,7 +115,17 @@ namespace Platform_Game
             //End level 
             if (player.Bounds.IntersectsWith(finish.Bounds))
             {
-                //Open next level info
+                if (touched == false)
+                {
+                    touched = true;
+                    //Open next level info
+                    Form2Info f2i = new Form2Info();
+                    this.Hide();
+                    f2i.ShowDialog();
+                    this.Close();
+
+                }
+
             }
         }
         

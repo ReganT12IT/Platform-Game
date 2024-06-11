@@ -50,6 +50,7 @@
             this.buttonStart.TabIndex = 4;
             this.buttonStart.Text = "&START LEVEL 2";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // Form2Info
             // 

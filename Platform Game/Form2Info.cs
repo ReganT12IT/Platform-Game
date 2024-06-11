@@ -16,5 +16,13 @@ namespace Platform_Game
         {
             InitializeComponent();
         }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            Form2 f1 = new Form2();
+            this.Hide();
+            f1.ShowDialog();
+            this.Close();
+        }
     }
 }
