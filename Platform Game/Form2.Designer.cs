@@ -39,8 +39,6 @@
             this.box9 = new System.Windows.Forms.PictureBox();
             this.box8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.box7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -54,7 +52,9 @@
             this.box1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box10)).BeginInit();
@@ -65,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.box1)).BeginInit();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // finish
@@ -180,28 +180,6 @@
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox5.Location = new System.Drawing.Point(567, 336);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(10, 270);
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(487, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "Only jump on sharp notes";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // box7
             // 
@@ -353,6 +331,18 @@
             this.screen.TabIndex = 2;
             this.screen.Paint += new System.Windows.Forms.PaintEventHandler(this.screen_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(487, 114);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(126, 20);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "Only jump on sharp notes";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Black;
@@ -362,6 +352,16 @@
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox5.Location = new System.Drawing.Point(567, 336);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(10, 270);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Form2
             // 
@@ -383,7 +383,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.box9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -398,6 +397,7 @@
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,8 +414,6 @@
         private System.Windows.Forms.PictureBox box9;
         private System.Windows.Forms.PictureBox box8;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox box7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -430,5 +428,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox player;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

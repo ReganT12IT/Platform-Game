@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace Platform_Game
 {
-    public partial class Form2Info : Form
+    public partial class Form3Info : Form
     {
-        public Form2Info()
+        public Form3Info()
         {
             InitializeComponent();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Form3 f3 = new Form3();
             this.Hide();
-            f2.ShowDialog();
+            f3.ShowDialog();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

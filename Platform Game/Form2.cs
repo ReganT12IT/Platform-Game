@@ -24,7 +24,7 @@ namespace Platform_Game
             };
         }
         //Declare variables
-        bool left, right, jump, touched, crochet;
+        bool left, right, jump, touched;
         int g = 17;
         int force;
         int counter;
@@ -178,22 +178,8 @@ namespace Platform_Game
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            counter = +1;
-            if (counter == 1000)
-            {
-                if (crochet == false)
-                {
-                    player.Hide();
-                    counter = 0;
-                    crochet = true;
-                }
-                if (crochet == true)
-                {
-                    player.Visible = true;
-                    counter = 0;
-                    crochet = false;
-                }
-            }
+            counter ++;
+            
             //Collision
             foreach (PictureBox p in collide)
             {
@@ -254,12 +240,55 @@ namespace Platform_Game
                 {
                     touched = true;
                     //Open next level info
-                    Form2Info f2i = new Form2Info();
+                    Form3Info f3i = new Form3Info();
                     this.Hide();
-                    f2i.ShowDialog();
+                    f3i.ShowDialog();
                     this.Close();
 
                 }
+            }
+            //150 bpm quarter notes
+            if (counter / 40 % 2 == 0)
+            {
+                box5.Show();
+                box6.Show();
+                box7.Show();
+                box8.Show();
+                box9.Show();
+                box10.Show();
+                box11.Show();
+                box4.Show();
+                pictureBox1.Show();
+                pictureBox2.Show();
+                pictureBox3.Show();
+                pictureBox4.Show();
+                pictureBox5.Show();
+                pictureBox6.Show();
+                pictureBox7.Show();
+                pictureBox9.Show();
+                pictureBox11.Show();
+
+            }
+            else
+            {
+                box5.Hide();
+                box6.Hide();
+                box7.Hide();
+                box8.Hide();
+                box9.Hide();
+                box10.Hide();
+                box11.Hide();
+                box4.Hide();
+                pictureBox1.Hide();
+                pictureBox2.Hide();
+                pictureBox3.Hide();
+                pictureBox4.Hide();
+                pictureBox5.Hide();
+                pictureBox6.Hide();
+                pictureBox7.Hide();
+                pictureBox9.Hide();
+                pictureBox11.Hide();
+
             }
         }
 
