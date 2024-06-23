@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.listBoxInformation = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(329, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Placeholder text";
             // 
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStart.Location = new System.Drawing.Point(329, 262);
+            this.buttonStart.Location = new System.Drawing.Point(317, 113);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(142, 78);
             this.buttonStart.TabIndex = 4;
@@ -52,23 +43,29 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
+            // listBoxInformation
+            // 
+            this.listBoxInformation.FormattingEnabled = true;
+            this.listBoxInformation.Location = new System.Drawing.Point(231, 12);
+            this.listBoxInformation.Name = "listBoxInformation";
+            this.listBoxInformation.Size = new System.Drawing.Size(315, 95);
+            this.listBoxInformation.TabIndex = 5;
+            // 
             // Form2Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBoxInformation);
             this.Controls.Add(this.buttonStart);
             this.Name = "Form2Info";
             this.Text = "Form2Info";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.ListBox listBoxInformation;
     }
 }

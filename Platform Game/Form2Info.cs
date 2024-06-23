@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Platform_Game
 {
@@ -15,6 +16,11 @@ namespace Platform_Game
         public Form2Info()
         {
             InitializeComponent();
+            string[] lines = File.ReadAllLines("../../text/f2.txt");
+            foreach (var line in lines)
+            {
+                listBoxInformation.Items.Add(line);
+            }
         }
 
         private void buttonStart_Click(object sender, EventArgs e)

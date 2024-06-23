@@ -49,7 +49,7 @@
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(142, 78);
             this.buttonStart.TabIndex = 4;
-            this.buttonStart.Text = "&START LEVEL 1";
+            this.buttonStart.Text = "&START LEVEL 3";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 

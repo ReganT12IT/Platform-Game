@@ -52,9 +52,9 @@
             this.box1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.player = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box10)).BeginInit();
@@ -77,8 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box1)).BeginInit();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // finish
@@ -331,6 +331,16 @@
             this.screen.TabIndex = 2;
             this.screen.Paint += new System.Windows.Forms.PaintEventHandler(this.screen_Paint);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox5.Location = new System.Drawing.Point(567, 336);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(10, 270);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -338,9 +348,9 @@
             this.textBox1.Location = new System.Drawing.Point(487, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
+            this.textBox1.Size = new System.Drawing.Size(170, 20);
             this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "Only jump on sharp notes";
+            this.textBox1.Text = "Jump on sharp notes to the tempo";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // player
@@ -352,16 +362,6 @@
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox5.Location = new System.Drawing.Point(567, 336);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(10, 270);
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Form2
             // 
@@ -396,8 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.box1)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
