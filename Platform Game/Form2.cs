@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
+using NAudio;
+using NAudio.Wave;
+using System.Threading;
 
 namespace Platform_Game
 {
@@ -14,6 +19,9 @@ namespace Platform_Game
     {
         //Declare variables
         List<PictureBox> collide;
+
+        AudioFileReader reader = new AudioFileReader("../../audio/metronome.mp3");
+
         public Form2()
         {
             InitializeComponent();
@@ -22,12 +30,16 @@ namespace Platform_Game
             {
                 box1, box2, box3, box5, box6, box7, box8, box9, box10, box11, box12,
             };
+            sound = new WaveOut();
+            sound.Init(reader);
         }
         //Declare variables
         bool left, right, jump, touched;
         int g = 17;
         int force;
         int counter;
+        IWavePlayer sound;
+        
 
         private void screen_Paint(object sender, PaintEventArgs e)
         {
@@ -179,7 +191,7 @@ namespace Platform_Game
         private void timer1_Tick(object sender, EventArgs e)
         {
             counter ++;
-            
+              
             //Collision
             foreach (PictureBox p in collide)
             {
@@ -247,6 +259,15 @@ namespace Platform_Game
 
                 }
             }
+
+            if (counter % 40 == 0)
+            {
+                reader = new AudioFileReader("../../audio/metronome.mp3");
+                sound = new WaveOut();
+                sound.Init(reader);
+                sound.Play();
+            }
+
             //150 bpm quarter notes
             if (counter / 40 % 2 == 0)
             {
@@ -267,7 +288,6 @@ namespace Platform_Game
                 pictureBox7.Show();
                 pictureBox9.Show();
                 pictureBox11.Show();
-
             }
             else
             {
@@ -288,8 +308,8 @@ namespace Platform_Game
                 pictureBox7.Hide();
                 pictureBox9.Hide();
                 pictureBox11.Hide();
-
             }
+            
         }
 
     }
