@@ -21,6 +21,7 @@ namespace Platform_Game
             {
                 listBoxInformation.Items.Add(line);
             }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

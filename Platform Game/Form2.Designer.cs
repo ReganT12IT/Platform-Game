@@ -55,6 +55,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.edgeb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box10)).BeginInit();
@@ -79,6 +80,7 @@
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edgeb)).BeginInit();
             this.SuspendLayout();
             // 
             // finish
@@ -265,7 +267,7 @@
             // box3
             // 
             this.box3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.box3.Location = new System.Drawing.Point(168, 460);
+            this.box3.Location = new System.Drawing.Point(143, 460);
             this.box3.Name = "box3";
             this.box3.Size = new System.Drawing.Size(100, 50);
             this.box3.TabIndex = 3;
@@ -275,9 +277,9 @@
             // box2
             // 
             this.box2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.box2.Location = new System.Drawing.Point(120, 356);
+            this.box2.Location = new System.Drawing.Point(171, 355);
             this.box2.Name = "box2";
-            this.box2.Size = new System.Drawing.Size(79, 60);
+            this.box2.Size = new System.Drawing.Size(56, 35);
             this.box2.TabIndex = 2;
             this.box2.TabStop = false;
             this.box2.Click += new System.EventHandler(this.box2_Click);
@@ -285,9 +287,9 @@
             // box1
             // 
             this.box1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.box1.Location = new System.Drawing.Point(255, 399);
+            this.box1.Location = new System.Drawing.Point(269, 419);
             this.box1.Name = "box1";
-            this.box1.Size = new System.Drawing.Size(34, 40);
+            this.box1.Size = new System.Drawing.Size(34, 91);
             this.box1.TabIndex = 1;
             this.box1.TabStop = false;
             this.box1.Click += new System.EventHandler(this.box1_Click);
@@ -325,6 +327,7 @@
             this.screen.Controls.Add(this.box2);
             this.screen.Controls.Add(this.box1);
             this.screen.Controls.Add(this.player);
+            this.screen.Controls.Add(this.edgeb);
             this.screen.Location = new System.Drawing.Point(-109, -50);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1127, 649);
@@ -363,6 +366,15 @@
             this.player.TabStop = false;
             this.player.Click += new System.EventHandler(this.player_Click);
             // 
+            // edgeb
+            // 
+            this.edgeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.edgeb.Location = new System.Drawing.Point(-207, 516);
+            this.edgeb.Name = "edgeb";
+            this.edgeb.Size = new System.Drawing.Size(1721, 50);
+            this.edgeb.TabIndex = 25;
+            this.edgeb.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +410,7 @@
             this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edgeb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,5 +443,6 @@
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox edgeb;
     }
 }

@@ -1,3 +1,8 @@
+Controls:
+Left - Left Arrow Key
+Right - Right Arrow Key
+Jump - Space Bar
+
 Subject and Explanation
 Sharp notes :On a piano a sharp note is a black note
 Tempo :The tempo is the speed of the music 

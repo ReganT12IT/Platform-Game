@@ -267,9 +267,17 @@ namespace Platform_Game
                 sound.Init(reader);
                 sound.Play();
             }
+            if (player.Bounds.IntersectsWith(edgeb.Bounds))
+            {
+                if (touched == false)
+                {
+                    player.Location = new Point(200, 427);
 
-            //150 bpm quarter notes
-            if (counter / 40 % 2 == 0)
+                }
+            }
+
+                //150 bpm quarter notes
+                if (counter / 40 % 2 == 0)
             {
                 box5.Show();
                 box6.Show();

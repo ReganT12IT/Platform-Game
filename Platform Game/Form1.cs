@@ -127,6 +127,15 @@ namespace Platform_Game
                 }
 
             }
+            if (player.Bounds.IntersectsWith(edgeb.Bounds))
+            {
+                if (touched == false)
+                {
+                    player.Location = new Point(94, 397);
+
+                }
+
+            }
         }
         
     }

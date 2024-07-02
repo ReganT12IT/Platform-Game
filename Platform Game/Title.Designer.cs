@@ -59,7 +59,7 @@
             // 
             this.listBoxInformation.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxInformation.FormattingEnabled = true;
-            this.listBoxInformation.Location = new System.Drawing.Point(197, 76);
+            this.listBoxInformation.Location = new System.Drawing.Point(199, 146);
             this.listBoxInformation.Name = "listBoxInformation";
             this.listBoxInformation.Size = new System.Drawing.Size(366, 134);
             this.listBoxInformation.TabIndex = 2;
