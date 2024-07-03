@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NAudio;
+using NAudio.Wave;
 
 namespace Platform_Game
 {
@@ -15,13 +17,14 @@ namespace Platform_Game
         public Form3Info()
         {
             InitializeComponent();
+
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
+            Form1Info f1i = new Form1Info();
             this.Hide();
-            f3.ShowDialog();
+            f1i.ShowDialog();
             this.Close();
         }
 

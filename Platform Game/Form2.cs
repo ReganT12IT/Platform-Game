@@ -255,18 +255,22 @@ namespace Platform_Game
                     Form3Info f3i = new Form3Info();
                     this.Hide();
                     f3i.ShowDialog();
-                    this.Close();
 
+                    this.Close();
+                    
                 }
             }
-
-            if (counter % 40 == 0)
+            if (touched == false)
             {
-                reader = new AudioFileReader("../../audio/metronome.mp3");
-                sound = new WaveOut();
-                sound.Init(reader);
-                sound.Play();
+                if (counter % 40 == 0)
+                {
+                    reader = new AudioFileReader("../../audio/metronome.mp3");
+                    sound = new WaveOut();
+                    sound.Init(reader);
+                    sound.Play();
+                }
             }
+          
             if (player.Bounds.IntersectsWith(edgeb.Bounds))
             {
                 if (touched == false)
